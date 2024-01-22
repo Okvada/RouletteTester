@@ -46,28 +46,31 @@ I hace created a few Main() scripts, which automatic tests the UI and gives feed
 To pick which scenario to test, i edit the Scenario_to_run-variable, and execute the .py:
 
 
-if __name__ == "__main__":
-    # Set the path to the ChromeDriver executable
-    driver_executable_path = 'C:/Users/okvad/Documents/Python Scripts/chromedriver-win64/chromedriver-win64/chromedriver.exe'
-    tester = CSGOEmpireRouletteTester(driver_executable_path)
-    
-    # Example Usage:
-    # Choose which simulation to run  
-    Scenario_to_run = 4
-    
-    # Wildcard, clear-, 0.01- ....... max-button testing    
-    if Scenario_to_run == 1:
-        tester.Main1()
 
-    #The Martingale System #1, Start_bet*2+Start_bet on loss
-    elif Scenario_to_run == 2:
-        #Argument: start_bet + team
-        tester.Main2(1.0, "ct")
-        
-    #The Martingale System #2, Start_bet*2+Start_bet on loss. Picks t or ct compared to last 100 rolls    
-    elif Scenario_to_run == 3:
-        #Argument: start_betq
-        tester.Main3(0.03)     
-    #Real life test, with login and balance    
-    elif Scenario_to_run == 4:
-        tester.Main4(0.02)
+
+
+      if __name__ == "__main__":
+       # Set the path to the ChromeDriver executable
+       driver_executable_path = 'C:/Users/okvad/Documents/Python Scripts/chromedriver-win64/chromedriver-win64/chromedriver.exe'
+       tester = CSGOEmpireRouletteTester(driver_executable_path)
+       
+       # Example Usage:
+       # Choose which simulation to run  
+       Scenario_to_run = 4
+       
+       # Wildcard, clear-, 0.01- ....... max-button testing    
+       if Scenario_to_run == 1:
+           tester.Main1()
+   
+       #The Martingale System #1, Start_bet*2+Start_bet on loss
+       elif Scenario_to_run == 2:
+           #Argument: start_bet + team
+           tester.Main2(1.0, "ct")
+           
+       #The Martingale System #2, Start_bet*2+Start_bet on loss. Picks t or ct compared to last 100 rolls    
+       elif Scenario_to_run == 3:
+           #Argument: start_betq
+           tester.Main3(0.03)     
+       #Real life test, with login and balance    
+       elif Scenario_to_run == 4:
+           tester.Main4(0.02)
